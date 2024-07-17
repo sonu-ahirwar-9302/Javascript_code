@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="data1">welcome to javascript</p>
+    <p onmouseover="my_onmouse()" onmouseout="my_onmouseout()">welcome to javascript</p>
+
+    <p id="data1">welcome to javascript</p>
+    <p id="data1">welcome to javascript</p>
+    <button onclick="my_onclick()">onclick</button>
+   
+    <script>
+        // const my_onclick=()=>{
+        //     var x=document.querySelector('p');
+        //     // var x=document.querySelectorAll('p');
+        //     x.style.color="red";
+        //}
+        const my_onmouse=()=>{
+            var x=document.querySelector('p');
+            x.style.color="red";
+        }
+        const my_onmouseout=()=>{
+            var x=document.querySelector('p');
+            x.style.color="black";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>retrive data from json</h1>
+    <div id="vid"></div>
+    <script>
+        var x=document.getElementById("vid");
+        fetch("video.json").then((res)=>{
+            return res.json();
+        }).then((item)=>{
+            my_video=item.user;
+            console.log(my_video);
+            my_video=(video)=>{
+                console.log(video.fname);
+                x=innerHTML=`
+                    <video src="${video.fname}" autoplay controls loop></video>
+
+                `
+            }
+            })
+    
+    </script>
+</body>
+</html>

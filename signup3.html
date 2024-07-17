@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="f1" onsubmit="login_user()">
+        <input type="text" name="nm"><br>
+        <input type="text" name="psw"><br>
+        <input type="submit">
+    </form>
+    <script>
+        const user_name=["ram", "shyam", "ghanshyam"];
+        const user_password=[123, 456, 789];
+
+        function login_user(){
+            var name=document.fi.nm.value;
+            var pass1=document.f1.psw.value;
+
+            for (value in user_name()){
+                if(name==user_name[value] && pass1==user_password[value])
+                {
+                    login
+                }
+            }
+        }
+    </script>
+</body>
+</html>

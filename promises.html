@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1> Javascript Promises</h1>
+    <script>
+        // promise -- came in js E-6 version
+        // Three states of Promises
+        // 1. Pending 2. Fulfilled 3. Rejected
+        // in the Promise method two conditions -- resolve (if condiditon fulfilled then 
+        //promise resolve--> that case we use then() )
+        //  or reject (if rfeject then uses catch ())  -- then and Catch are two callback function
+        
+        // function prom(complete){
+        //     return new Promise(function(resolve,reject){
+        //         if(complete){
+        //             resolve("Promises is Succesful")
+        //         }else{
+        //             reject("promises is failed")
+        //         }
+        //     });
+        // }
+        // console.log(prom(true));
+
+
+
+        // 2 . Attempt added some functionality
+    //     function prom(complete){
+    //         return new Promise(function(resolve,reject){
+    //             console.log(" Fetching Data Please Wait.....")
+    //             setTimeout(()=>{
+    //                 if(complete){
+    //                 resolve("Promises is Succesful")
+    //             }else{
+    //                 reject("promises is failed")
+    //             }
+    //             },5000)  
+    //         });
+    //     }
+    //     let onfulfilment =(result) => {
+    //         console.log(result)
+    //     }
+    //     let onRejection = (error) =>{
+    //         console.log(error)
+    //     }
+    //    prom(false).then(onfulfilment).catch(onRejection);
+        
+
+
+       // 3rd part briefing some code
+    //    function prom(complete){
+    //         return new Promise(function(resolve,reject){
+    //             console.log(" Fetching Data Please Wait.....")
+    //             setTimeout(()=>{
+    //                 if(complete){
+    //                 resolve("Promises is Succesful")
+    //             }else{
+    //                 reject("promises is failed")
+    //             }
+    //             },5000)  
+    //         });
+    //     }
+    //    prom(true).then((result) =>{
+    //     console.log(result);
+    //    }).catch((error) =>{
+    //     console.log(error);
+      // })
+
+
+       // math calculation with Promises
+
+    //    function prom(a,b){
+    //     return new Promise(function(resolve , reject){
+    //         console.log("Fetching Data Please Wait.....")
+    //         var c=a/b;
+    //         setTimeout(() =>{
+    //             if(a,b){
+    //                 resolve(` Your Answer is : ${c}`);
+    //             }else{
+    //                 reject("Failed to calculate")
+    //             }
+    //         },4000)
+    //     });
+    //    }
+    //    prom(10,2).then((result) =>{
+    //     console.log(result);
+    //    }).catch((error) =>{
+    //     console.log(error)
+    //    });
+
+
+    // FETCHING JSON DATA BY PROMIESES
+    function prom(){
+        return new Promise(function(resolve , reject){
+            console.log("Fetching Data Please Wait.....")
+            
+            setTimeout(() =>{
+                $.get("https://jsonplaceholder.typicode.com/posts", function(data){
+                    resolve(data)
+                }).fail(err => {
+                    reject("Failed to load Json Data");
+                });
+            },4000)
+        });
+       }
+       prom().then((result) =>{
+        console.log(result);
+       }).catch((error) =>{
+        console.log(error)
+       });
+
+        
+    </script>
+</body>
+</html>

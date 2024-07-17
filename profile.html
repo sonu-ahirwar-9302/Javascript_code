@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>nbdsjjcjbkjdsncj</h1>
+    <button onclick="print_document()" id="btn">print</button>
+    <script>
+        var x=localStorage.getItem("key");
+        var y=localStorage.getItem("key1")
+        document.write(x);
+        document.write(y);
+        const print_document=()=>{
+            document.getElementById("btn").style.display="none";
+            window.print();
+        }
+    </script>
+</body>
+</html>

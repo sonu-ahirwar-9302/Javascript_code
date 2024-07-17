@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .prod1{
+            height: 100px;
+            width: 100px;
+            background-color: cyan;
+        }
+        .prod1 img{
+            height: 50%;
+            width: 100%;
+            padding: 2px;
+        }
+    </style>
+    <div style="display: flex;">
+        <!-- <div class="prod1">
+            <img src="Image/img.jpg.jpg" alt="">
+            price <p id="price">2000</p>
+            <button onclick="add_to_cart()">add to cark</button>
+    
+        </div> -->
+        <div class="prod1">
+            <img src="Image/img.jpg.jpg" alt="">
+            price <p id="price1">1000</p>
+            <button onclick="add_to_cart()">add to cark</button>
+    
+        </div>
+        <div class="prod1">
+            <img src="Image/img.jpg.jpg" alt="">
+            price <p id="price2">3000</p>
+            <button onclick="add_to_cart()">add to cark</button>
+    
+        </div>
+        <div class="prod1">
+            <img src="Image/img.jpg.jpg" alt="">
+            price <p id="price3">4000</p>
+            <button onclick="add_to_cart()">add to cark</button>
+    
+        </div>
+    </div>
+        <script>
+           
+            // console.log(typeof(price))
+
+            var price1=0;
+            var total_item=0;
+            function add_to_cart(){
+                var price=parseInt(document.getElementById("price1").innerText);
+                var price=parseInt(document.getElementById("price2").innerText);
+                var price=parseInt(document.getElementById("price3").innerText);
+                price1=price1+price;
+                total_item=total_item+1;
+                console.log(total_item)
+                console.log(price1);
+            }
+            // var price2=0;
+            // var total_item=0;
+            // function add_to_cart(){
+            //     var price=parseInt(document.getElementById("price1").innerText);
+            //     price2=price2+price1;
+            //     total_item=total_item+1;
+            //     console.log(total_item)
+            //     console.log(price2);
+            // }
+        </script>
+</body>
+</html>

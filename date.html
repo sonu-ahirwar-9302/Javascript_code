@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="data"></div>
+    <script>
+       const mydate=()=>{
+        var dte=new Date();
+        console.log(dte.toDateString());
+        console.log(dte.toISOString());
+        console.log(dte.toLocaleString());
+        var dte1=new Date("2024","2","31","8","42","12");
+        console.log(dte1);
+        document.getElementById("data").innerHTML=dte.toLocaleString();
+       }
+       setInterval("mydate()",1000);
+    </script>
+    
+</body>
+</html>

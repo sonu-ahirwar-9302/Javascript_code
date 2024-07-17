@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table{
+            background-color: chartreuse;
+            border: 2px solid black;
+            width: 100%;
+            height: 6vh;
+        }
+    </style>
+    <form action="" name="f1" onsubmit="result()">
+    <input type="text" placeholder="phy marks" required name="phy"><br>
+    <input type="text" placeholder="che marks" required name="che"><br>
+    <input type="text" placeholder="math marks" required name="math"><br>
+    <input type="submit" value="check your result">
+    </form>
+    <table id="mytable">
+        
+    </table>
+
+
+    <script>
+        function result(){
+            const phy=document.f1.phy.value;
+            const che=document.f1.che.value;
+            const math=document.f1.math.value;
+            if(phy<0 || che<0 || math<0 || phy>100 || che>100 || math>100)
+                {
+                    alert("Invalid marks")
+                    document.getElementById("mytable").innerHTML=`
+                    <th>subject </th>
+                    <th>total marks</th>
+                    <th>percentage</th>
+                    <th>result</th>
+                    <th>division</th>
+            
+            </tr>`;
+            
+                }
+                else if((phy<33 && che>=33 && math>=33))
+                    {
+                        alert("Valid marks")
+                    }
+        }
+        var a=20;
+        var b="sonu";
+        var city="sagar";
+        document.getElementById("mytable").innerHTML=`
+        <tr>
+            <th>subject</th>
+            <th>total marks</th>
+            <th>percentage</th>
+            <th>result</th>
+            <th>division</th>
+            
+            </tr>
+            `;
+    </script>
+</body>
+</html>

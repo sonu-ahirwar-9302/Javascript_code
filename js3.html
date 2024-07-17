@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welcome to </h1>
+    Enter the number: <input type="text" id="kuchhbhi">
+    <button onclick="mera_fun">submit</button>
+    <br>
+    value=<p id="value"></p>
+    <script>
+        /*myvalue=confirm("Are you sure want to delete this")
+        if(myvalue==true){
+            alert("you click on ok button")
+        }
+        else{
+            alert("you click on cancel button")
+        }*/
+
+
+
+
+        function mera_fun(){
+            var x=document.getElementById("kuchhbhi").value;
+            // document.write(x);
+            document.getElementById("value").innerText=x;
+        }
+        // var1=prompt("Enter the first value");
+        // var2=prompt("Enter th second value");
+        // var3=parseInt(var1)+parseInt(var2);
+        // document.write(var3);
+    </script>
+</body>
+</html>

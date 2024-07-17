@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="mybody">
+    
+<p id="show"></p>
+
+
+
+    <script>
+        var my_array1=["img.jpg.jpg","name","satya","hai"];
+        console.log(my_array1[0]);
+        document.write(my_array1[1],"<br>");
+        for(i in my_array1){
+            
+            document.write(my_array1[i],"<br>");
+            // document.write(i,"<br>")
+        }
+        my_array1.map((kuchhbhi)=>{
+            document.write(kuchhbhi,"<br>");
+        })
+
+
+        document.getElementById("show").innerHTML=`<img src=${my_array1[0]}>`
+
+
+    </script>
+</body>
+</html>

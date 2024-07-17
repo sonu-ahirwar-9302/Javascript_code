@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>key up event</h1>
+    <input type="text" onkeyup="add_func1()" id="data1">
+    <p id="ans">add</p>
+    <p id="ans2">add</p>
+    <table id="ans1"></table>
+
+
+    <script src="13may.js"></script>
+    <script>
+
+        var obj1=['image/img.jpg.jpg','image/img.jpg.jpg']
+
+        document.getElementById("ans1").innerHTML=`
+        <tr>
+            <td>
+                <img src="${obj1[0]}"/>
+            </td>
+        </tr>  
+        <tr>
+            <td>
+                <img src="${obj1[1]}"/>
+            </td>
+        </tr>  `;
+        for (i in navigator){
+            // document.getElementById("ans2").innerHTML=i;
+            console.log(i);
+        }
+    </script>
+</body>
+</html>

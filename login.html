@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="f1" name="f1" onsubmit="login_user()">
+    <input type="text" name="name" placeholder="UserName"><br>
+    <input type="text" name="psw" placeholder="Password"><br>
+    <input type="submit">
+    </form>
+
+    <script>
+       let username=["atul","prashant","sunil"];
+       let password=[123,345,654];
+       function login_user(){
+        var name=document.f1.name.value;
+        var psw1=document.f1.psw.value;
+        for(let val in username ){
+            if(name==username[val] &&  psw1==password[val])
+            {
+                // document.write("login");
+                window.open("admin.html")
+                break;
+            }
+            else{
+                document.write("invelid login");
+                break;
+            }
+           
+
+        }
+        
+
+       }
+
+
+    </script>
+
+</body>
+</html>

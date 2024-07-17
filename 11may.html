@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" name="f1" onsubmit=" return validation()">
+        <input type="text" name="nm"><br>
+        <input type="text" name="psw"><br>
+        <input type="submit">
+    </form>
+
+    <script>
+        function validation(){
+            var nm=document.f1.nm.value;
+            var ps=document.f1.psw.value;
+            if(nm==""){
+                alert("please enter name");
+                document.f1.nm.focus();
+                return false;
+            }
+            if(ps==""){
+                alert("please enter your password");
+                document.f1.psw.focus();
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

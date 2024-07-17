@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter your name: <br> <input type="text" id="myinput"><br>
+    <button onclick="myinput()">Signin</button>
+
+    <script>
+        const myinput=()=>{
+            var data = document.getElementById("myinput").value;
+
+            fetch("signup2.json").then((res)=>{
+                return res.json();
+            }).then((item)=>{
+                var y = item.user.length;
+                var data1 = item.user;
+
+                // var jsondata=[];
+                // data.map((key)=>{
+                //     jsondata[0]=key.fname
+                // })
+
+                for (var x of data1){
+                    if(data==x.fname){
+                        console.log("Login")
+                        var y=x.lname;
+                        window.location.assign("profile.html");
+                        localStorage.setItem("key",data);
+                        break
+                    }
+                }
+            })
+        }
+    </script>
+</body>
+</html>
